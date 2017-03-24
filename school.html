@@ -1,0 +1,63 @@
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+.mySlides {
+   display:block;
+   margin:auto;
+ }
+</style>
+<a href="home.html"><button>Back</button></a>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/67/d8/13/67d813cbc26c7f70b866f7bdda6a8251.jpg" style="width:50%;">
+  <img class="mySlides" src="http://img.romwe.com/images/romwe.com/201608/1471913878635252777.jpg" style="width:50%;">
+  <img class="mySlides" src="http://img.shein.com/images/goods_img_bak/shein.com/201610/00/14763212676636084525_thumbnail_405x552.jpg" style="width:50%;">
+  <img class="mySlides" src="http://img.shein.com/images/goods_img_bak/shein.com/201609/3f/14732972567960743379_thumbnail_405x552.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/5f/78/46/5f7846258ab336146214fa1019217dad.jpg" style="width:50%;">
+  <img class="mySlides" src="http://i.ebayimg.com/00/s/MTAxMFg3Njk=/z/IsMAAOSwENxXmwGt/$_1.JPG" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/564x/bb/71/0a/bb710ae5d74c4f00b0968cac6487fe65.jpg" style="width:50%;">
+  <img class="mySlides" src="http://img.romwe.com/images/romwe.com/201608/1470964052102998267.jpg" style="width:50%;">
+  <img class="mySlides" src="http://sincerelykenz.com/wp-content/uploads/2015/09/Screen-Shot-2015-09-28-at-7.32.19-AM.png" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/d7/97/10/d7971060edd164116a28738fc01d029a.jpg" style="width:50%;">
+
+
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<iframe id="song" width="560" height="315" src="https://www.youtube.com/embed/unPD-v-N2AE?autoplay=1" frameborder="0" allowfullscreen></iframe>

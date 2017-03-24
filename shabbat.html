@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<style>
+.mySlides {
+   display:block;
+   margin:auto;
+ }
+</style>
+
+<a href="home.html"><button>Back</button></a>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="http://image.dhgate.com/0x0/f2/albu/g3/M00/0F/53/rBVaHFX4-5OACRO0AADNVTgou_c651.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/40/b6/48/40b648cd53a45a3dae9647f0c92b959c.jpg" style="width:50%;">
+  <img class="mySlides" src="http://img.shein.com/images/goods_img_bak/shein.com/201702/3d/14869720469725842245_thumbnail_405x552.jpg" style="width:50%;">
+  <img class="mySlides" src="http://g01.a.alicdn.com/kf/HTB1Enx4IVXXXXXHXXXXq6xXFXXXY/High-Waist-Pleated-Midi-font-b-Skirt-b-font-Women-Houndstooth-font-b-Floral-b-font.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/a6/ae/2f/a6ae2f605880d3f789b4d140ef22cd9c.jpg" style="width:50%;">
+  <img class="mySlides" src="https://richmedia.channeladvisor.com/ImageDelivery/imageService?profileId=12017974&recipeName=pdlg436x502&itemID=421353&swatchID=4886" style="width:50%;">
+  <img class="mySlides" src="http://thumbs.ebaystatic.com/images/m/mOx_WlzLn8PnoKKjUYu3FSw/s-l225.jpg" style="width:50%;">
+  <img class="mySlides" src="https://img0.etsystatic.com/010/1/6033108/il_fullxfull.451368386_6b6e.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/38/98/ac/3898ac7c533e0f73cd1424524818efe9.jpg" style="width:50%;">
+  <img class="mySlides" src="http://www.escritoresnicaragua.com/wp-content/uploads/2015/07/winter-skirts-and-dresses.jpg" style="width:50%;">
+  <img class="mySlides" src="http://g03.a.alicdn.com/kf/HTB1zo9RLXXXXXbKXFXXq6xXFXXXg/Winter-Thick-Long-Flare-Skirts-Solid-Imitation-Wool-Blend-Zipper-High-Waisted-A-Line-Calf-length.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/a2/45/31/a2453168dff7e282e46a3821e807f2ee.jpg" style="width:50%;">
+  <img class="mySlides" src="http://rbk.h-cdn.co/assets/cm/14/50/548a69c6e4722_-_rbk-pleated-skirt-taylor-swift-0912-opener-msc.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/70/32/19/703219f284f9863fef6b18f353fb5cc8.jpg" style="width:50%;">
+
+
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+      x[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>

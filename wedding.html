@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.mySlides {
+   display:block;
+   margin:auto;
+ }
+</style>
+<a href="home.html"><button>Back</button></a>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/32/cc/c9/32ccc99f157d3bb2ae67cc8fcc80f066.jpg" style="width:50%;">
+  <img class="mySlides" src="https://jf-na-cdn.justfab.com/media/images/products/DY1720372-0001/DY1720372-0001-1_295x430.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/87/28/aa/8728aaa44e311a8bc2fa81f545b145cc.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/originals/4b/11/ab/4b11ab86cc5377e144c60b85243fb108.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/04/bd/c1/04bdc1be56d14cadd42c4f2d49af9bee.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/85/54/db/8554db4cca76df34f9884acb90793eaa.jpg" style="width:50%;">
+
+
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>

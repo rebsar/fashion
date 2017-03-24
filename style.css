@@ -1,0 +1,30 @@
+body{
+  background: linear-gradient(white,#F58CD5,grey)
+}
+h1{
+  text-align: center;
+}
+button{
+  font-size: 30px;
+  color:white;
+  background-color:black;
+  margin-right: 45px;
+
+  transition:background-color 1s;
+}
+button:hover {
+  background-color:#ED1AAE;
+  transition:1s;
+}
+.links {
+  margin-bottom: 25px;
+}
+.home img {
+  vertical-align: top;
+  width:auto;
+  height:200px;
+}
+
+#song{
+  display:none;
+}

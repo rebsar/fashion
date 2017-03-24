@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+.mySlides {
+   display:block;
+   margin:auto;
+ }
+</style>
+<a href="home.html"><button>Back</button></a>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/69/cf/18/69cf18001cf18857c6878bcba2d5cdc7.jpg" style="width:50%;">
+  <img class="mySlides" src="http://www.modnespodnice.eu/wp-content/uploads/sites/20/2012/03/spodnica-rozkloszowana-dzianinowa-i-luzny-gruby-sweter.jpg" style="width:50%;">
+  <img class="mySlides" src="http://lp2.hm.com/hmprod?set=source%5B/environment/2016/7HZ_0388_008R.jpg%5D,width%5B3698%5D,height%5B4323%5D,x%5B782%5D,y%5B700%5D,type%5BFASHION_FRONT%5D&hmver=0&call=url%5Bfile:/product/main%5D" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/0e/26/6d/0e266d0ff6943dd6bde8f296c0624ead.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/236x/fd/44/00/fd4400119a73eb904c13187e9558cb11.jpg" style="width:50%;">
+  <img class="mySlides" src="http://g02.a.alicdn.com/kf/HTB1IOr.JVXXXXb.XXXXq6xXFXXXR/2015-New-Arrive-Autumn-Winter-Men-Jacket-Denim-Hooded-Jean-Jacket-Sweatshirt-Sleeve-Pacthwork-Denim-Blue.jpg" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/564x/f3/33/9a/f3339af33ea9e8fdbd08c3f351c6a934.jpg" style="width:50%;">
+  <img class="mySlides" src="http://images.asos-media.com/inv/media/6/9/6/1/7761696/red/image1xl.jpg?$XL$" style="width:50%;">
+  <img class="mySlides" src="http://www.cosstores.com/Content/ProductContent/0474101001/0474101001_5_0.jpg" style="width:50%;">
+  <img class="mySlides" src="http://images.asos-media.com/inv/media/9/4/0/1/6301049/navy/image1xl.jpg?$XL$" style="width:50%;">
+  <img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/736x/9d/63/53/9d63531db7763d563de9685e93a7c954.jpg" style="width:50%;">
+  <img class="mySlides" src="http://www.bluemaize.net/im/skirts/denim-skirts-1.jpg" style="width:50%;">
+
+
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<iframe id="song" width="560" height="315" src="https://www.youtube.com/embed/atruo8PNAqk?autoplay=1" frameborder="0" allowfullscreen></iframe>
